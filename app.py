@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import os
-import datetime
+from datetime import datetime
 import subprocess
 
 app = Flask(__name__)
