@@ -1,0 +1,21 @@
+<!doctype html>
+<title>File Upload</title>
+<h1>Upload a File</h1>
+<form method=post enctype=multipart/form-data action="/upload">
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form>
+
+<h2>Files and Folders in uploads/</h2>
+<ul>
+  {% for entry in entries %}
+    <li>{{ entry }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Get File Path</h2>
+<form method=post action="/get_path">
+  <label for="file_path">Enter File Path:</label>
+  <input type="text" name="file_path" id="file_path" required>
+  <input type="submit" value="Run">
+</form>
